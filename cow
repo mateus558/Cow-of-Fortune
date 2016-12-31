@@ -1,8 +1,8 @@
 
-function init-session {
-	chmod +x ~/.check_day.sh
+function fortune-cow {
+	chmod +x ~/.fortune_cow/.check_day.sh
 
-	FLAG=$(~/.check_day.sh)
+	FLAG=$(~/.fortune_cow/.check_day.sh)
 	d=$(date +'%a-%b-%d/%m/%y' )
     h=$(date +'%T')
     GREEN='\033[0;32m'
@@ -10,17 +10,17 @@ function init-session {
 
 	if [ $FLAG == 1 ]
 	then
-        	if [ -f ~/.session_out ]
+        	if [ -f ~/.fortune_cow/.session_out ]
         	then
-                	rm ~/.session_out
-                	touch ~/.session_out
+                	rm ~/.fortune_cow/.session_out
+                	touch ~/.fortune_cow/.session_out
         	fi
-        	chmod +x ~/.vocab
-			fortune -a | cowsay >> ~/.session_out && echo >> ~/.session_out && ~/.vocab >> ~/.session_out
+        	chmod +x ~/.fortune_cow/.vocab
+			fortune -a | cowsay >> ~/.fortune_cow/.session_out && echo >> ~/.fortune_cow/.session_out && ~/.fortune_cow/.vocab >> ~/.fortune_cow/.session_out
 	fi
 	
-	cat ~/.session_out
+	cat ~/.fortune_cow/.session_out
 	echo -e "${GREEN}${d} ${RED}${h}"
 }
 
-init-session
+fortune-cow
