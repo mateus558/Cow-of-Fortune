@@ -20,9 +20,12 @@ if [ ! -d "$DIRECTORY" ]; then
 	mkdir $DIRECTORY
 fi
 
-wget -O $DIRECTORY https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/.check_day.sh
-wget -O $DIRECTORY https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/cow
+echo "Downloading files..."
+wget -O $DIRECTORY https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/.check_day.sh >> log
+wget -O $DIRECTORY https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/cow >> log
+echo "Installing script..."
 cat $DIRECTORY/cow >> $HOME/.bashrc
 rm $DIRECTORY/cow
-wget -O ~/.vocab "https://goo.gl/N4EiTq" --no-check-certificate
-wget -O ~/.vocabscript "https://goo.gl/gI7xKQ" --no-check-certificate
+echo "Installing Sudocabulary..."
+wget -O ~/.vocab "https://goo.gl/N4EiTq" --no-check-certificate >> log
+wget -O ~/.vocabscript "https://goo.gl/gI7xKQ" --no-check-certificate >> log
