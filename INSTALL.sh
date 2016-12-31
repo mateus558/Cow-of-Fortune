@@ -20,11 +20,11 @@ if [ ! -d "$DIRECTORY" ]; then
 	mkdir $DIRECTORY
 fi
 
-touch ~/log
 echo "Downloading files..."
 wget -q -O ~/.fortune_cow/.check_day.sh "https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/.check_day.sh"
 wget -q -O ~/.fortune_cow/cow.sh "https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/cow.sh"
 echo "Installing script..."
+echo "chmod +x ~/.fortune_cow/cow.sh" >> $HOME/.bashrc
 echo "./~/.fortune_cow/cow.sh" >> $HOME/.bashrc
 echo "Installing Sudocabulary..."
 wget -q -O ~/.vocab "https://goo.gl/N4EiTq" --no-check-certificate
