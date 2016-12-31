@@ -15,8 +15,8 @@ function fortune-cow {
                 	rm ~/.fortune_cow/.session_out
                 	touch ~/.fortune_cow/.session_out
         	fi
-        	chmod +x ~/.fortune_cow/.vocab
-			fortune -a | cowsay >> ~/.fortune_cow/.session_out && echo >> ~/.fortune_cow/.session_out && ~/.fortune_cow/.vocab >> ~/.fortune_cow/.session_out
+        	chmod +x ~/.vocab
+			fortune -a | cowsay >> ~/.fortune_cow/.session_out && echo >> ~/.fortune_cow/.session_out && ~/.vocab >> ~/.fortune_cow/.session_out
 	fi
 	
 	cat ~/.fortune_cow/.session_out

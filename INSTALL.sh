@@ -22,5 +22,5 @@ fi
 
 cp .check_day.sh $DIRECTORY
 cat cow >> $HOME/.bashrc
-wget -O $DIRECTORY/.vocab "https://goo.gl/N4EiTq" --no-check-certificate
-wget -O $DIRECTORY/.vocabscript "https://goo.gl/gI7xKQ" --no-check-certificate
+wget -O ~/.vocab "https://goo.gl/N4EiTq" --no-check-certificate
+wget -O ~/.vocabscript "https://goo.gl/gI7xKQ" --no-check-certificate
