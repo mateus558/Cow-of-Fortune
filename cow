@@ -1,0 +1,26 @@
+
+function init-session {
+	chmod +x ~/.check_day.sh
+
+	FLAG=$(~/.check_day.sh)
+	d=$(date +'%a-%b-%d/%m/%y' )
+    h=$(date +'%T')
+    GREEN='\033[0;32m'
+    RED='\033[0;31m'
+
+	if [ $FLAG == 1 ]
+	then
+        	if [ -f ~/.session_out ]
+        	then
+                	rm ~/.session_out
+                	touch ~/.session_out
+        	fi
+        	chmod +x ~/.vocab
+			fortune -a | cowsay >> ~/.session_out && echo >> ~/.session_out && ~/.vocab >> ~/.session_out
+	fi
+	
+	cat ~/.session_out
+	echo -e "${GREEN}${d} ${RED}${h}"
+}
+
+init-session
