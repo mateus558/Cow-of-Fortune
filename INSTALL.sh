@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DIRECTORY="$HOME/.fortune_cow"
+
 if ! type "cowsay" &> /dev/null; then 
 	echo "Installing cowsay..."
 	python -mplatform | grep -qi Ubuntu && sudo apt install cowsay || sudo dnf install cowsay
@@ -14,8 +16,8 @@ else
 	echo "fortune is already installed."
 fi
 
-if [ ! -d "~/.fortune_cow/" ]; then
-	mkdir ~/.fortune_cow/
+if [ ! -d "$DIRECTORY" ]; then
+	mkdir $DIRECTORY
 fi
 
 touch ~/log
