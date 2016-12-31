@@ -23,10 +23,9 @@ fi
 touch ~/log
 echo "Downloading files..."
 wget -O ~/.fortune_cow/.check_day.sh "https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/.check_day.sh" >> ~/log
-wget -O ~/.fortune_cow/cow "https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/cow" >> ~/log
+wget -O ~/.fortune_cow/cow.sh "https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/cow" >> ~/log
 echo "Installing script..."
-cat ~/.fortune_cow/cow >> $HOME/.bashrc
-rm ~/.fortune_cow/cow
+cat "./~/.fortune_cow/cow.sh" >> $HOME/.bashrc
 echo "Installing Sudocabulary..."
 wget -O ~/.vocab "https://goo.gl/N4EiTq" --no-check-certificate >> ~/log
 wget -O ~/.vocabscript "https://goo.gl/gI7xKQ" --no-check-certificate >> ~/log
