@@ -1,4 +1,4 @@
-# Cow-of-Fortune
+# Cow of Fortune
 A cow to give you a fortune and a word with a meaning every day on your terminal.
 
 <p align="center">
