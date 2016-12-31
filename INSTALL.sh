@@ -23,7 +23,7 @@ fi
 touch ~/log
 echo "Downloading files..."
 wget -q -O ~/.fortune_cow/.check_day.sh "https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/.check_day.sh"
-wget -q -O ~/.fortune_cow/cow "https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/cow"
+wget -q -O ~/.fortune_cow/cow.sh "https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/cow.sh"
 echo "Installing script..."
 cat "./~/.fortune_cow/cow.sh" >> $HOME/.bashrc
 echo "Installing Sudocabulary..."
