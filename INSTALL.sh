@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY="$HOME/.fortune_cow"
+DIRECTORY="~/.fortune_cow"
 
 if ! type "cowsay" &> /dev/null; then 
 	echo "Installing cowsay..."
@@ -21,8 +21,8 @@ if [ ! -d "$DIRECTORY" ]; then
 fi
 
 echo "Downloading files..."
-wget -O $DIRECTORY https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/.check_day.sh >> log
-wget -O $DIRECTORY https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/cow >> log
+wget -O ~/.fortune_cow/.check_day.sh "https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/.check_day.sh" >> log
+wget -O ~/.fortune_cow/cow "https://raw.githubusercontent.com/mateus558/Cow-of-Fortune/master/cow" >> log
 echo "Installing script..."
 cat $DIRECTORY/cow >> $HOME/.bashrc
 rm $DIRECTORY/cow
